@@ -66,8 +66,8 @@ class DataFormatting:
                 #         key.replace(' ', '_'): value for key, value in full_dict.items() if value == 1
                 #     }
                 for term in terms:
-                    term_lower = term.lower()
-                    index = text.lower().find(term_lower)
+                    term_lower = str(term).lower()
+                    index = str(text).lower().find(term_lower)
 
                     if index != -1:
                         after_index = index + len(term_lower)
@@ -79,8 +79,8 @@ class DataFormatting:
             else:
                 # print(f'Text: {text}')
                 for term in terms:
-                    term_lower = term.lower()
-                    index = text.lower().find(term_lower)
+                    term_lower = str(term).lower()
+                    index = str(text).lower().find(term_lower)
 
                     if index != -1:
                         after_index = index + len(term_lower)
